@@ -1,0 +1,125 @@
+:root {
+    --main-color: #1e202b;
+    --sec-color: #009ad8;
+}
+
+body {
+    background-color: var(--main-color);
+}
+
+.fit-content {
+    width: fit-content;
+}
+
+.nav-background {
+    background-color: var(--main-color) !important;
+}
+
+input {
+    background-color: var(--main-color);
+}
+
+.bg-item-light {
+    background-color: #323544;
+}
+
+.bg-item-dark {
+    background-color: #262a36;
+}
+
+.bg-main {
+    background-color: #222430;
+}
+
+.bg-item-head {
+    background-color: #2d313d;
+}
+
+.text-blue {
+    color: var(--sec-color);
+}
+
+.grey-text {
+    color: rgb(187, 187, 187);
+}
+
+.bg {
+    background-image: url(../images/background.png);
+    background-repeat: no-repeat;
+}
+
+.big-font {
+    font-size: 4rem;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+    color: var(--sec-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 2rem;
+    border: 2px solid var(--sec-color);
+    border-radius: 40px;
+}
+
+.tagline {
+    font-size: 0.75rem;
+    color: rgb(203, 203, 203);
+    width: fit-content;
+    margin-left: 30%;
+}
+
+.background {
+
+    background-image: url("../images/background.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.form-control {
+    color: var(--bs-body-color);
+    background-color: var(--main-color);
+    border: none;
+}
+
+.form-control:focus {
+    color: white;
+    background-color: var(--main-color);
+    border-color: none;
+    box-shadow: none;
+}
+
+input::-webkit-input-placeholder {
+    color: rgb(136, 134, 134) !important;
+}
+
+input:-moz-placeholder {
+    color: rgb(136, 134, 134) !important;
+}
+
+.item-height {
+    height: 278px;
+}
+
+.footer {
+    background-color: #262a36;
+}
+
+.icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    color: var(--sec-color);
+    transition: all 0.4s;
+}
+
+.icon:hover {
+    background-color: var(--sec-color);
+    color: white;
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ! Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary nav-background navbar-dark">
+        <div class="container p-5">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" class="w-25 mx-2">
+                <span>Weather</span>
+                <span class="tagline d-block">tagline goes here</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active mx-4" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white mx-4 cst-nav-hover" aria-current="page" href="#">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white mx-4 cst-nav-hover" aria-current="page" href="#">Live cameras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white mx-4 cst-nav-hover" aria-current="page" href="#">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white mx-4 cst-nav-hover" aria-current="page" href="#">Contact</a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg">
+        <div class="container py-5 w-75">
+            <div class="form-group mt-5">
+                <input type="text" class="form-control rounded-5 py-3 px-4 mb-5 text-white"
+                    placeholder="Find your location..." id="search" />
+            </div>
+
+            <div class="row g-0">
+                <!--  ?========================== T  O  D  A  Y ================== -->
+                <div class="col-md-4">
+                    <div class="item bg-item-light rounded-start">
+                        <div
+                            class=" item-head d-flex justify-content-between grey-text bg-item-head px-3 rounded-2 w-100">
+                            <p id="todayName" class="mt-2"></p>
+                            <span class="mt-2">
+                                <span id="todayNumber"></span>
+                                <span id="todayMonth"></span>
+                            </span>
+                        </div>
+
+                        <div class="item-body item-height">
+                            <div class="text-white px-3 py-2">
+                                <p id="location" class="fs-5 grey-text"></p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="big-font fw-bold">
+                                        <span id="todayTemp"></span>
+                                        <span>25<sup>o</sup> C</span>
+                                    </span>
+                                    <img id="todayImg" src="" alt="" />
+                                </div>
+                                <p id="todayWeather" class="text-blue"></p>
+                            </div>
+
+                            <div class="d-flex grey-text py-3">
+                                <div class="d-flex mx-3">
+                                    <img src="images/icon-umberella.png" alt="">
+                                    <span class="mx-2" id="windHumidity"></span>
+                                </div>
+                                <div class="d-flex mx-3">
+                                    <img src="images/icon-wind.png" alt="">
+                                    <span class="mx-2" id="windSpeed"></span>
+                                </div>
+                                <div class="d-flex mx-3">
+                                    <img src="images/icon-compass.png" alt="">
+                                    <span class="mx-2" id="windDirection"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- ? ======================= T  O  M  O  R  R  O  W ================== -->
+                <div class="col-md-4">
+                    <div class="item">
+                        <div class="item-head">
+                            <div class="bg-main py-1">
+                                <p class="grey-text text-center my-2" id="tomorrowName"></p>
+                            </div>
+                        </div>
+
+                        <div class="item-body bg-danger">
+                            <div class="bg-item-dark text-center item-height">
+                                <img src="images/113.png" alt="" class="mt-5" id="tomorrowImg">
+                                <div class="tomorrow-info ">
+                                    <p class="text-white fs-4" id="tomorrowMaxTemp"> <sup>o</sup>C</p>
+                                    <p class="grey-text" id="tomorrowMinTemp"> <sup>o</sup></p>
+                                    <p class="text-blue" id="tomorrowWeather"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ? ========= A  F  T  E  R     T  O  M  O  R  R  O  W  ================== -->
+                <div class="col-md-4">
+                    <div class="item bg-item-light">
+                        <div class="item-head">
+                            <div class="bg-item-head py-1">
+                                <p id="afterTomorrowName" class="grey-text text-center my-2"></p>
+                            </div>
+                        </div>
+
+                        <div class="item-body item-height text-center">
+                            <img src="images/116.png" alt="" class="mt-5" id="afterTomorrowImg">
+                            <div class="tomorrow-info ">
+                                <p class="text-white fs-4" id="afterTomorrowMaxTemp"> <sup>o</sup>C</p>
+                                <p class="grey-text" id="afterTomorrowMinTemp"> <sup>o</sup></p>
+                                <p class="text-blue" id="afterTomorrowWeather"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ! ================  F  O  O  T  E  R ================== -->
+    <footer class="footer py-5">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="form-group">
+                        <input type="text" placeholder="Enter your email to subscribe..."
+                            class="form-control rounded-5 py-3 px-4 mb-5 text-white">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="footer-icons d-flex flex-row-reverse ms-5">
+                        <div class="icon mx-1">
+                            <i class="fa-brands fa-pinterest"></i>
+                        </div>
+
+                        <div class="icon mx-1">
+                            <i class="fa-brands fa-google-plus-g"></i>
+                        </div>
+
+                        <div class="icon mx-1">
+                            <i class="fa-brands fa-twitter"></i>
+                        </div>
+
+                        <div class="icon mx-1">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+            <p class="grey-text">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
